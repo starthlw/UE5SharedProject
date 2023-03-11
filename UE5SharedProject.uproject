@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{A18A0AEF-45A9-9E15-6FFF-C7BF184D3AD7}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "UE5SharedProject",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		}
+	]
+}

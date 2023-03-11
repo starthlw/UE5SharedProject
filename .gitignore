@@ -72,3 +72,10 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+*_ExternalActors__/
+*_ExternalObjects__/
+
+.vsconfig
+
+Config/Default*
