@@ -58,10 +58,6 @@ void FAntAssetTestModule::ShutdownModule()
     }
     CreatedAssetTypeActions.Empty();
 
-	UToolMenus::UnRegisterStartupCallback(this);
-
-	UToolMenus::UnregisterOwner(this);
-
 	FAntAssetTestStyle::Shutdown();
 
 	FAntAssetEditorCommands::Unregister();
@@ -102,31 +98,6 @@ void FAntAssetTestModule::PluginButtonClicked()
 {
 	FGlobalTabmanager::Get()->TryInvokeTab(AntAssetTestTabName);
 }
-
-//void FAntAssetTestModule::RegisterMenus()
-//{
-//	// Owner will be used for cleanup in call to UToolMenus::UnregisterOwner
-//	FToolMenuOwnerScoped OwnerScoped(this);
-//
-//	{
-//		UToolMenu* Menu = UToolMenus::Get()->ExtendMenu("LevelEditor.MainMenu.Window");
-//		{
-//			FToolMenuSection& Section = Menu->FindOrAddSection("WindowLayout");
-//			Section.AddMenuEntryWithCommandList(FAntAssetEditorCommands::Get().OpenPluginWindow, PluginCommands);
-//		}
-//	}
-//
-//	{
-//		UToolMenu* ToolbarMenu = UToolMenus::Get()->ExtendMenu("LevelEditor.LevelEditorToolBar");
-//		{
-//			FToolMenuSection& Section = ToolbarMenu->FindOrAddSection("Settings");
-//			{
-//				FToolMenuEntry& Entry = Section.AddEntry(FToolMenuEntry::InitToolBarButton(FAntAssetEditorCommands::Get().OpenPluginWindow));
-//				Entry.SetCommandList(PluginCommands);
-//			}
-//		}
-//	}
-//}
 
 #undef LOCTEXT_NAMESPACE
 	
